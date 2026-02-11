@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate your Grade Point Average (GPA) with Aspin UK's free and easy-to-use GPA calculator. Track your academic progress on a standard 4.0 scale.">
+    <meta name="keywords" content="GPA calculator, calculate GPA, semester GPA, college GPA, university GPA, 4.0 scale">
+    <title>GPA Calculator | Aspin UK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Aspin<span> UK</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="study-tips.html">Study Tips</a></li>
+                    <li><a href="gpa-calculator.html" class="active">GPA Calculator</a></li>
+                    <li><a href="uk-resources.html">UK Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>GPA Calculator</h1>
+            <p>Calculate your Grade Point Average (GPA) quickly and accurately to track your academic progress.</p>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-main">
+        <div class="calculator-container">
+            <div class="gpa-calculator-form">
+                <div class="calculator-header">
+                    <h2>Enter Your Course Details</h2>
+                    <p>Add your courses, credits, and grades below. Use a standard 4.0 GPA scale.</p>
+                </div>
+                <div id="courses-container">
+                    <!-- Course rows will be added here by JS -->
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="addCourseBtn" class="btn-secondary"><i class="fas fa-plus"></i> Add Course</button>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="calculateGpaBtn" class="btn-calculate"><i class="fas fa-calculator"></i> Calculate GPA</button>
+                    <button type="button" id="resetGpaBtn" class="btn-reset"><i class="fas fa-redo"></i> Reset</button>
+                </div>
+            </div>
+
+            <div class="gpa-results" id="gpaResultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Your GPA Result</h2>
+                </div>
+                <div class="results-summary">
+                    <div class="total-cost">
+                        <h3>Your Semester GPA is:</h3>
+                        <div class="total-amount" id="gpaResult">0.00</div>
+                        <div class="per-person" id="gpaInfo"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- How to Use / Info Section -->
+    <section class="gpa-info-text" style="padding: 60px 5%; background-color: var(--light);">
+        <div class="container" style="max-width: 900px; margin: 0 auto;">
+            <div class="section-title">
+                <h2>Understanding Your <span>GPA</span></h2>
+            </div>
+            <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: var(--shadow);">
+                <h3 style="color: var(--dark); margin-bottom: 15px;">Why is GPA Important?</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light);">
+                    Your Grade Point Average (GPA) is a critical metric used by educational institutions and employers to assess your academic performance. It provides a standardized way to compare students' achievements across different schools and courses. A strong GPA can open doors to scholarships, graduate programs, and competitive job opportunities.
+                </p>
+                <h3 style="color: var(--dark); margin-bottom: 15px;">How is it Calculated?</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light);">
+                    The GPA is calculated by converting your letter grades into numerical points (using the scale below), multiplying those points by the number of credits for each course, and then dividing the total grade points by the total number of credits attempted.
+                </p>
+                <p style="color: var(--text-light);">
+                    <strong>Formula:</strong> Total Grade Points / Total Credits = GPA
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GPA Scale Info -->
+    <section class="comparison-table">
+        <div class="section-title">
+            <h2>Standard <span>GPA Scale</span></h2>
+            <p>This calculator uses a standard 4.0 scale, common in the US. Please note the UK grading system is different and does not typically use GPA.</p>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Letter Grade</th>
+                        <th>Grade Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>A</td><td>4.0</td></tr>
+                    <tr><td>A-</td><td>3.7</td></tr>
+                    <tr><td>B+</td><td>3.3</td></tr>
+                    <tr><td>B</td><td>3.0</td></tr>
+                    <tr><td>B-</td><td>2.7</td></tr>
+                    <tr><td>C+</td><td>2.3</td></tr>
+                    <tr><td>C</td><td>2.0</td></tr>
+                    <tr><td>C-</td><td>1.7</td></tr>
+                    <tr><td>D+</td><td>1.3</td></tr>
+                    <tr><td>D</td><td>1.0</td></tr>
+                    <tr><td>F</td><td>0.0</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Aspin UK</h3>
+                <p>Empowering students worldwide with the knowledge and tools to achieve academic excellence.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="study-tips.html">Study Tips</a></li>
+                    <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+                    <li><a href="uk-resources.html">UK Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Popular Subjects</h3>
+                <ul class="footer-links">
+                    <li><a href="courses.html#tech">Computer Science</a></li>
+                    <li><a href="courses.html#business">Business Studies</a></li>
+                    <li><a href="courses.html#arts">Creative Arts</a></li>
+                    <li><a href="courses.html#humanities">Humanities</a></li>
+                    <li><a href="courses.html#science">Natural Sciences</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@Aspinuk.com"><i class="fas fa-envelope"></i> support@Aspinuk.com</a></li>
+                    <li><a href="tel:+448001234567"><i class="fas fa-phone"></i> +44 (0)800 123 4567</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Global Network</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Aspin UK. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

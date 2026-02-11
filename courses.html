@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore a wide range of online courses at Aspin UK. From technology and business to creative arts, find the perfect course taught by industry experts.">
+    <meta name="keywords" content="online courses, web development bootcamp, digital marketing course, data science python, graphic design course, Aspin UK courses">
+    <title>All Courses | Aspin UK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-graduation-cap"></i> Aspin<span> UK</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" class="active">Courses</a></li>
+                    <li><a href="study-tips.html">Study Tips</a></li>
+                    <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+                    <li><a href="uk-resources.html">UK Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-content">
+            <h1>Explore Our Courses</h1>
+            <p>Find the perfect course to expand your knowledge and skills</p>
+        </div>
+    </section>
+
+    <!-- Destinations Filter -->
+    <section class="destinations-filter">
+        <div class="filter-container">
+            <h3>Filter by Subject Area</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Subjects</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="arts">Creative Arts</button>
+                <button class="filter-btn" data-filter="science">Science</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Destinations -->
+    <section class="all-destinations">
+        <div class="section-title">
+            <h2>Our <span>Comprehensive</span> Course Catalog</h2>
+            <p>All courses are taught by industry experts and designed for optimal learning</p>
+        </div>
+        
+        <div class="destinations-grid" id="destinationsContainer">
+            <!-- Web Development -->
+            <div class="destination-card detailed" data-category="tech" id="web-dev">
+                <div class="budget-badge">12 Weeks</div>
+                <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Web Development">
+                <div class="destination-content">
+                    <h3>Web Development Bootcamp</h3>
+                    <div class="destination-region">Technology</div>
+                    <p>A comprehensive bootcamp covering HTML, CSS, JavaScript, React, and Node.js to make you a job-ready full-stack developer.</p>
+                    
+                    <div class="cost-breakdown">
+                        <h4>Course Modules:</h4>
+                        <div class="cost-item"><span>Module 1:</span><span>Frontend Fundamentals</span></div>
+                        <div class="cost-item"><span>Module 2:</span><span>JavaScript Deep Dive</span></div>
+                        <div class="cost-item"><span>Module 3:</span><span>React & State Management</span></div>
+                        <div class="cost-item"><span>Module 4:</span><span>Backend with Node.js</span></div>
+                    </div>
+                    
+                    <div class="destination-features">
+                        <h4>Best For:</h4>
+                        <div class="features-tags">
+                            <span class="tag">Beginners</span>
+                            <span class="tag">Career Changers</span>
+                            <span class="tag">Aspiring Developers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-tips">
+                        <h4>Learning Tip:</h4>
+                        <p>Build projects consistently throughout the course to solidify your understanding and build a portfolio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Digital Marketing -->
+            <div class="destination-card detailed" data-category="business" id="digital-marketing">
+                <div class="budget-badge">8 Weeks</div>
+                <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing">
+                <div class="destination-content">
+                    <h3>Digital Marketing</h3>
+                    <div class="destination-region">Business</div>
+                    <p>Master SEO, SEM, content marketing, and social media to grow businesses online and drive sales.</p>
+                    
+                    <div class="cost-breakdown">
+                        <h4>Course Modules:</h4>
+                        <div class="cost-item"><span>Module 1:</span><span>SEO Fundamentals</span></div>
+                        <div class="cost-item"><span>Module 2:</span><span>Paid Advertising (PPC)</span></div>
+                        <div class="cost-item"><span>Module 3:</span><span>Social Media Strategy</span></div>
+                        <div class="cost-item"><span>Module 4:</span><span>Analytics & Reporting</span></div>
+                    </div>
+                    
+                    <div class="destination-features">
+                        <h4>Best For:</h4>
+                        <div class="features-tags">
+                            <span class="tag">Marketers</span>
+                            <span class="tag">Business Owners</span>
+                            <span class="tag">Freelancers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-tips">
+                        <h4>Learning Tip:</h4>
+                        <p>Start a personal blog or manage a social media page to apply the concepts you learn in real-time.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Graphic Design -->
+            <div class="destination-card detailed" data-category="arts" id="graphic-design">
+                <div class="budget-badge">10 Weeks</div>
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Graphic Design">
+                <div class="destination-content">
+                    <h3>Graphic Design Principles</h3>
+                    <div class="destination-region">Creative Arts</div>
+                    <p>Learn the fundamentals of visual design, including typography, color theory, and layout using tools like Adobe Photoshop and Illustrator.</p>
+                    
+                    <div class="cost-breakdown">
+                        <h4>Course Modules:</h4>
+                        <div class="cost-item"><span>Module 1:</span><span>Intro to Design Theory</span></div>
+                        <div class="cost-item"><span>Module 2:</span><span>Mastering Adobe Suite</span></div>
+                        <div class="cost-item"><span>Module 3:</span><span>Branding & Logo Design</span></div>
+                        <div class="cost-item"><span>Module 4:</span><span>UI/UX Design Basics</span></div>
+                    </div>
+                    
+                    <div class="destination-features">
+                        <h4>Best For:</h4>
+                        <div class="features-tags">
+                            <span class="tag">Aspiring Designers</span>
+                            <span class="tag">Artists</span>
+                            <span class="tag">Marketers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-tips">
+                        <h4>Learning Tip:</h4>
+                        <p>Create a personal branding project for yourself to practice logo design, color selection, and typography.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Data Science -->
+            <div class="destination-card detailed" data-category="science" id="data-science">
+                <div class="budget-badge">16 Weeks</div>
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Science">
+                <div class="destination-content">
+                    <h3>Data Science with Python</h3>
+                    <div class="destination-region">Science & Technology</div>
+                    <p>Learn to analyze data, create visualizations, and build machine learning models using Python, Pandas, and Scikit-learn.</p>
+                    
+                    <div class="cost-breakdown">
+                        <h4>Course Modules:</h4>
+                        <div class="cost-item"><span>Module 1:</span><span>Python for Data Analysis</span></div>
+                        <div class="cost-item"><span>Module 2:</span><span>Data Visualization</span></div>
+                        <div class="cost-item"><span>Module 3:</span><span>Machine Learning Models</span></div>
+                        <div class="cost-item"><span>Module 4:</span><span>Big Data Technologies</span></div>
+                    </div>
+                    
+                    <div class="destination-features">
+                        <h4>Best For:</h4>
+                        <div class="features-tags">
+                            <span class="tag">Analysts</span>
+                            <span class="tag">Programmers</span>
+                            <span class="tag">STEM Students</span>
+                        </div>
+                    </div>
+                    
+                    <div class="destination-tips">
+                        <h4>Learning Tip:</h4>
+                        <p>Participate in a Kaggle competition to apply your skills to real-world datasets and problems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-table">
+        <div class="section-title">
+            <h2>Course <span>Comparison</span></h2>
+            <p>Quick overview of our core programs to help you choose</p>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                        <th>Key Skills</th>
+                        <th>Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>12 Weeks</td>
+                        <td>Beginner</td>
+                        <td>React, Node.js</td>
+                        <td>Career Changers</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Marketing</td>
+                        <td>8 Weeks</td>
+                        <td>All Levels</td>
+                        <td>SEO, PPC, Analytics</td>
+                        <td>Business Owners</td>
+                    </tr>
+                    <tr>
+                        <td>Graphic Design</td>
+                        <td>10 Weeks</td>
+                        <td>Beginner</td>
+                        <td>Adobe Suite, Branding</td>
+                        <td>Creatives</td>
+                    </tr>
+                    <tr>
+                        <td>Data Science</td>
+                        <td>16 Weeks</td>
+                        <td>Intermediate</td>
+                        <td>Python, Machine Learning</td>
+                        <td>Analysts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Start Learning?</h2>
+            <p>Use our GPA calculator to track your progress or explore our study tips to get started.</p>
+            <a href="gpa-calculator.html" class="cta-button">Use GPA Calculator</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Aspin UK</h3>
+                <p>Empowering students worldwide with the knowledge and tools to achieve academic excellence.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="study-tips.html">Study Tips</a></li>
+                    <li><a href="gpa-calculator.html">GPA Calculator</a></li>
+                    <li><a href="uk-resources.html">UK Resources</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Popular Subjects</h3>
+                <ul class="footer-links">
+                    <li><a href="courses.html#tech">Computer Science</a></li>
+                    <li><a href="courses.html#business">Business Studies</a></li>
+                    <li><a href="courses.html#arts">Creative Arts</a></li>
+                    <li><a href="courses.html#humanities">Humanities</a></li>
+                    <li><a href="courses.html#science">Natural Sciences</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@Aspinuk.com"><i class="fas fa-envelope"></i> support@Aspinuk.com</a></li>
+                    <li><a href="tel:+448001234567"><i class="fas fa-phone"></i> +44 (0)800 123 4567</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> Global Network</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Aspin UK. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
